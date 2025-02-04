@@ -19,7 +19,6 @@ Nivida GPUS as that is what I currently run you will need to look up how to set 
    ```sh
     docker-compose exec ollama ollama list
    
-
 3. Next, pull the model you want to test (in this case, I am using `deepseek-r1:8b`):
 
    ```sh
