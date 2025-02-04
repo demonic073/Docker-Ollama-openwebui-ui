@@ -1,4 +1,6 @@
-version: '3.8'
+
+networks:
+  ollama_network:
 
 services:
   ollama:
@@ -24,6 +26,9 @@ services:
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    networks:
+      - ollama_network      
+      
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -37,7 +42,9 @@ services:
     volumes:
       - open-webui:/app/backend/data
     environment:
-      - OLLAMA_API_BASE_URL=http://ollama:11434
+      - OLLAMA_BASE_URL=http://ollama:11434
+    networks:
+      - ollama_network    
 
 volumes:
   ollama:
