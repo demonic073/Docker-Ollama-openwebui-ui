@@ -70,6 +70,29 @@ Example: ```memory: 16g```
 also you can tweak the CPU setting based off how many cores your CPU supports 
 Example: ```cpus: '12'```
 
+# TIPS 
+
+I had some issues trying to get the NVIDIA Drivers working with WSL
+
+.1 Add this repo
+
+```
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
+    sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
+    curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+```
+
+.2 next run the following command
+```
+sudo nvidia-ctk runtime configure --runtime=docker
+```
+
+.3 restart docker service 
+```
+sudo systemctl restart docker
+```
 
 
    
