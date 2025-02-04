@@ -11,7 +11,7 @@ This is for Nivida GPUS as that is what I currently run I also created Intel GPU
 
 # Deployment
 
-1. clone this repo
+1. clone this repo and cd Docker-Ollama-openwebui-ui/
 
 2. start the docker cotainers:
 
