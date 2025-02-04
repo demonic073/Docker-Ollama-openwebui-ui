@@ -2,7 +2,7 @@
 
 I built this docker-compose deployment to isolate any outside connections within the docker container to make sure all queries ran on the ai model are only ran local nothing is getting sent outside. I mostly used this to test Deepseek ai model, but this can also be used with any supported Olama compatible models as well.  
 
-Nivida GPUS as that is what I currently run you will need to look up how to set other GPUS yourself. 
+Nivida GPUS as that is what I currently run I also created Intel GPU that worked on older Mac book pro
 
 # Prerequisites
 * Ubuntu 24.04.1 Native or WSL 
@@ -18,7 +18,11 @@ Nivida GPUS as that is what I currently run you will need to look up how to set 
 
    ```sh
     docker-compose up -d
-   
+
+*For INTEL GPU version*
+   ```sh
+   docker-compose -f docker-compose-intel.yml up -d
+
 3. Next, pull the model you want to test (in this case, I am using `deepseek-r1:8b`):
 
    ```sh
