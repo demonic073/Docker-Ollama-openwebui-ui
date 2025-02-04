@@ -33,7 +33,7 @@ services:
       - OLLAMA_NUM_GPU_LAYERS=80
     networks:
       - ollama_network      
-    runtime: nvidia   
+        #    runtime: nvidia   
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
