@@ -5,8 +5,7 @@ I built this docker-compose deployment to isolate any outside connections within
 This is for Nivida GPUS as that is what I currently run I also created Intel GPU that worked on older Mac book pro
 
 # Prerequisites
-* Ubuntu 24.04.1 Native or WSL 
-* Prerequisites
+* Ubuntu 24.04.1 Native or WSL [How to install WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 * [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
