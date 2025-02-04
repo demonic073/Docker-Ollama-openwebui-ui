@@ -1,6 +1,6 @@
 # docker compose ollama and open-webui ui
 
-I built this docker-compose deployment to isolate any outside connections within the docker container to make sure all queries ran on the ai model are only ran local nothing is getting sent outside. I mostly used this to test Deepseek ai model, but this can also be used with any support Olama compatible models as well.  
+I built this docker-compose deployment to isolate any outside connections within the docker container to make sure all queries ran on the ai model are only ran local nothing is getting sent outside. I mostly used this to test Deepseek ai model, but this can also be used with any supported Olama compatible models as well.  
 
 Nivida GPUS as that is what I currently run you will need to look up how to set other GPUS yourself. 
 
