@@ -59,3 +59,17 @@ You can montitor the connections to make sure the containers are not talking to 
 
     ```sh
     sudo tcpdump -i any port 11434 -n | awk '{print $5}' | cut -d'.' -f1-4 | sort -u
+
+# Tweaks 
+
+To get more CPU power and quick response there are 2 options you can tweak in Ollama in the docker-compose.yml file, I had added base config of 8GB of memory and 4 CPU which is quite slow but is safe load under lower powered machines. 
+
+Memory based on the amount of memory you have for your machine example memory:
+Example: ```memory: 16g```
+
+also you can tweak the CPU setting based off how many cores your CPU supports 
+Example: ```cpus: '12'```
+
+
+
+   
