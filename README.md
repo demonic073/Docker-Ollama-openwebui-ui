@@ -38,3 +38,22 @@ deepseek-r1:8b    28f8fd6cdc67    4.9 GB    2 minutes ago
 
 5. log into the Open-webui in your local browser
    http://localhost:8080/
+
+# Monitoring
+
+You can montitor the connections to make sure the containers are not talking to the internet and only locally on your machine
+
+1. Show Only Source & Destination IPs
+
+    ```sh
+    sudo tcpdump -i any port 11434 -n -q
+
+2. Show Only Unique IP Addresses
+
+    ```sh
+    sudo tcpdump -i any port 11434 -n | awk '{print $3, $5}' | cut -d'.' -f1-4 | sort -u
+
+3. Show Only Outbound Destination IPs
+
+    ```sh
+    sudo tcpdump -i any port 11434 -n | awk '{print $5}' | cut -d'.' -f1-4 | sort -u
