@@ -19,8 +19,8 @@ services:
           devices:
             - capabilities: [gpu] 
         limits:
-          memory: 16g
-          cpus: '12'
+          memory: 8g
+          cpus: '4'
     read_only: true
     volumes:
       - ollama:/root/.ollama
